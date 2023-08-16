@@ -47,4 +47,5 @@ return require('packer').startup(function(use)
 		requires = { 'nvim-tree/nvim-web-devicons', opt = true }
 	}
 	use('mg979/vim-visual-multi')
+	use('voldikss/vim-floaterm')
 end)
