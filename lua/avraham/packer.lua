@@ -44,6 +44,7 @@ return require('packer').startup(function(use)
   -- Texting XP
   use('m4xshen/autoclose.nvim')
   use { 'codota/tabnine-nvim', run = "./dl_binaries.sh" }
+  use "terrortylor/nvim-comment"
 
   -- Window additions
   use {
