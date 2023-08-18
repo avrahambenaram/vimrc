@@ -34,6 +34,7 @@ local lspkind = require('lspkind')
 cmp.setup({
   mapping = {
     ['<CR>'] = cmp.mapping.confirm({select = false}),
+	['<C-Space>'] = cmp.mapping.complete()
   },
   formatting = {
     format = lspkind.cmp_format({
