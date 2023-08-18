@@ -41,7 +41,7 @@ return require('packer').startup(function(use)
   }
   use('onsails/lspkind.nvim')
 
-  -- Texting XP
+  -- Coding XP
   use('m4xshen/autoclose.nvim')
   use { 'codota/tabnine-nvim', run = "./dl_binaries.sh" }
   use "terrortylor/nvim-comment"
