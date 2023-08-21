@@ -18,6 +18,7 @@ return require('packer').startup(function(use)
   -- Themes
   use({ 'rose-pine/neovim', as = 'rose-pine' })
   use('Mofiqul/dracula.nvim')
+  use {"xero/miasma.nvim"}
 
   -- treesitter
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
