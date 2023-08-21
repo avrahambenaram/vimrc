@@ -53,7 +53,6 @@ return require('packer').startup(function(use)
 	  requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
   use('mg979/vim-visual-multi')
-  use('brenoprata10/nvim-highlight-colors') -- Hex color highlight (Optional)
 
   -- Git integration
   use('tpope/vim-fugitive')
