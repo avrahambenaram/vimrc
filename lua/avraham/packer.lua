@@ -58,6 +58,7 @@ return require('packer').startup(function(use)
   use('tpope/vim-fugitive')
 
   -- Others
+  use('brenoprata10/nvim-highlight-colors')
   use('voldikss/vim-floaterm')
   use('mbbill/undotree')
   use('andweeb/presence.nvim') -- Discord RP (Optional)
