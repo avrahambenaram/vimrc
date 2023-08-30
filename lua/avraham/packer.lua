@@ -19,6 +19,7 @@ return require('packer').startup(function(use)
   use({ 'rose-pine/neovim', as = 'rose-pine' })
   use('Mofiqul/dracula.nvim')
   use {"xero/miasma.nvim"}
+  use {"aktersnurra/no-clown-fiesta.nvim"}
 
   -- treesitter
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
@@ -46,6 +47,26 @@ return require('packer').startup(function(use)
   use('m4xshen/autoclose.nvim')
   use { 'codota/tabnine-nvim', run = "./dl_binaries.sh" }
   use "terrortylor/nvim-comment"
+  use({
+      "folke/trouble.nvim",
+      config = function()
+          require("trouble").setup {
+			  icons = false,
+			  fold_open = "v", -- icon used for open folds
+			  fold_closed = ">", -- icon used for closed folds
+			  indent_lines = false, -- add an indent guide below the fold icons
+			  signs = {
+				  -- icons / text used for a diagnostic
+				  error = "error",
+				  warning = "warn",
+				  hint = "hint",
+				  information = "info"
+			  },
+			  use_diagnostic_signs = false -- enabling this will use the signs defined in your lsp client
+		  }
+      end
+  })
+
 
   -- Window additions
   use {
