@@ -20,6 +20,7 @@ return require('packer').startup(function(use)
   use('Mofiqul/dracula.nvim')
   use {"xero/miasma.nvim"}
   use {"aktersnurra/no-clown-fiesta.nvim"}
+  use {"arcticicestudio/nord-vim"}
 
   -- treesitter
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
