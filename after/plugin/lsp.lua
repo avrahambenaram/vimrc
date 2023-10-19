@@ -9,13 +9,15 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
 end)
 lsp.ensure_installed({
+	'csharp_ls',
 	'docker_compose_language_service',
 	'dockerls',
-	'tsserver',
 	'eslint',
 	'lua_ls',
+	'omnisharp',
 	'rust_analyzer',
 	'tailwindcss',
+	'tsserver',
 	'prismals',
 })
 
@@ -50,3 +52,20 @@ cmp.setup({
     })
   },
 })
+
+-- C#
+local pid = vim.fn.getpid()
+local omnisharp_bin = "/usr/local/bin/omnisharp/OmniSharp"
+require'lspconfig'.omnisharp.setup{
+    cmd = { omnisharp_bin, "--languageserver" , "--hostPID", tostring(pid) };
+	on_attach = function(client)
+      -- other on_attach code
+      require'formatter'.setup({
+        filetype = {
+          csharp = {
+            -- formatter setup
+          }
+        }
+      })
+    end
+}

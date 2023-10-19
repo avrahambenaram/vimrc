@@ -69,6 +69,11 @@ return require('packer').startup(function(use)
       end
   })
 
+  -- Formatter
+  use { 'mhartington/formatter.nvim' }
+  use 'omnisharp/omnisharp-roslyn'
+  use 'OmniSharp/omnisharp-vim'
+
 
   -- Window additions
   use {
